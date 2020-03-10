@@ -10,7 +10,9 @@ Add the following lines to your `Podfile`:
 
 ```ruby
 use_frameworks!
-pod 'SwiftSignalRClient'
+
+source 
+pod 'SwiftSignalRClientMD'
 ```
 
 Then run:
