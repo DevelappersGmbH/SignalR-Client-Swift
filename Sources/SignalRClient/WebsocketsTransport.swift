@@ -125,7 +125,7 @@ public class WebsocketsTransport: Transport {
     }
 }
 
-enum WebSocketsTransportError: Error {
+public enum WebSocketsTransportError: Error {
     case webSocketClosed(statusCode: Int, reason: String)
     case PingTimedOut
 }
