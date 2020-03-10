@@ -8,14 +8,14 @@
 
 import Foundation
 
-internal class DefaultTransportFactory: TransportFactory {
+open class DefaultTransportFactory: TransportFactory {
     let logger: Logger
 
     init(logger: Logger) {
         self.logger = logger
     }
 
-    func createTransport(availableTransports: [TransportDescription]) throws -> Transport {
+    open func createTransport(availableTransports: [TransportDescription]) throws -> Transport {
         for transport in availableTransports {
             if transport.transportType == .webSockets {
                 return PingingWebsocketsTransport(logger: logger)
